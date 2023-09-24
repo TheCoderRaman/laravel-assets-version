@@ -1,0 +1,45 @@
+{
+    "name": "thecoderraman/laravel-assets-version",
+    "homepage": "https://github.com/TheCoderRaman/laravel-assets-version",
+    "description": "Laravel static assets versioning via query string: app.js → app.js?v=d41d8cd98f",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "TheCoderRaman",
+            "email": "devramanverma@gmail.com",
+            "homepage": "https://github.com/TheCoderRaman"
+        }
+    ],
+    "require": {
+        "php": "^7.3|~8"
+    },
+    "autoload": {
+        "files": [
+            "src/Helpers/Helper.php"
+        ],
+        "psr-4": {
+            "TheCoderRaman\\AssetsVersion\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TheCoderRaman\\AssetsVersion\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "TheCoderRaman\\AssetsVersion\\AssetsVersionServiceProvider"
+            ],
+            "aliases": {
+                "AssetsVersion": "TheCoderRaman\\AssetsVersion\\Support\\Facades\\AssetsVersion"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
