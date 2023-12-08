@@ -17,7 +17,8 @@
     },
     "require-dev": {
         "phpmd/phpmd": "^2.9",
-        "phpunit/phpunit": "^9.4"
+        "phpunit/phpunit": "^9.4",
+        "pdepend/pdepend": "^2.8"
     },
     "autoload": {
         "files": [
