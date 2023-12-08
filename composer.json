@@ -2,6 +2,7 @@
     "name": "thecoderraman/laravel-assets-version",
     "homepage": "https://github.com/TheCoderRaman/laravel-assets-version",
     "description": "Laravel static assets versioning via query string: app.js → app.js?v=d41d8cd98f",
+    "keywords": ["laravel", "framework", "library", "assets", "version", "versioning"],
     "type": "library",
     "license": "MIT",
     "authors": [
