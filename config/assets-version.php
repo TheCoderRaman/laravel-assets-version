@@ -60,7 +60,7 @@ return [
     |
     */
 
-    'assets_path' => env('ASSET_PATH', base_path("assets")),
+    'assets_path' => env('ASSET_URL', base_path("assets")),
 
     /*
     |--------------------------------------------------------------------------
