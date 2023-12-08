@@ -98,10 +98,6 @@ class AssetsVersionServiceProvider extends ServiceProvider implements Deferrable
      */
     protected function setupConfig(): void
     {
-        if (!$this->app instanceof Application) {
-            return;
-        }
-
         $configSource = (
             realpath($this->configPath) ?: $this->configPath
         );
