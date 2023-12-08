@@ -102,7 +102,7 @@ class AssetsVersionServiceProvider extends ServiceProvider implements Deferrable
             realpath($this->configPath) ?: $this->configPath
         );
 
-        if (!$this->app->runningInConsole()) {
+        if ($this->app->runningInConsole()) {
             $this->publishes([$configSource
                 => config_path('assets-version.php'),
             ]);
