@@ -15,6 +15,9 @@
     "require": {
         "php": "^7.3|~8"
     },
+    "require-dev": {
+        "phpmd/phpmd": "^2.9"
+    },
     "autoload": {
         "files": [
             "src/Helpers/Helper.php"
