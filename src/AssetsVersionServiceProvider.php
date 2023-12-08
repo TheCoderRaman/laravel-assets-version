@@ -105,7 +105,7 @@ class AssetsVersionServiceProvider extends ServiceProvider implements Deferrable
         if ($this->app->runningInConsole()) {
             $this->publishes([$configSource
                 => config_path('assets-version.php'),
-            ]);
+            ], 'assets-version');
         }
 
         $this->mergeConfigFrom($configSource, 'assets-version');
