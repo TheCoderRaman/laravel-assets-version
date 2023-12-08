@@ -18,7 +18,8 @@
     "require-dev": {
         "phpmd/phpmd": "^2.9",
         "phpunit/phpunit": "^9.4",
-        "pdepend/pdepend": "^2.8"
+        "pdepend/pdepend": "^2.8",
+        "mockery/mockery": "^1.6"
     },
     "autoload": {
         "files": [
