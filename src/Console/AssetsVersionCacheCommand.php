@@ -167,15 +167,9 @@ class AssetsVersionCacheCommand extends Command
                 continue;
             }
 
-            $relativePath = ltrim(Str::after(
-                $absolutePath, $assetsVersion->getAssetPath()
-            ),DIRECTORY_SEPARATOR);
-
-            $relativePath = str_replace("\\", "/", $relativePath);
-
-            $relativePath = ltrim(str_replace(
-                Str::afterLast($basePath,DIRECTORY_SEPARATOR), '', $relativePath
-            ), "/");
+            $relativePath = str_replace(
+                "\\", "/", $assetFile->getRelativePathname()
+            );
 
             $versioned[$relativePath] = substr(
                 $this->filesystem->hash(
