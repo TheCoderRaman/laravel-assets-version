@@ -66,7 +66,7 @@ class AssetsVersion implements AssetsVersionInterface
             asset('/'), PHP_URL_PATH
         );
 
-        return realpath(
+        return (
             $this->app->basePath($assetPath)
         );
     }
