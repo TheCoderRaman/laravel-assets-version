@@ -155,6 +155,10 @@ class AssetsVersionCacheCommand extends Command
         {
             $absolutePath = $assetFile->getRealPath();
 
+            if($assetFile->isDir()){
+                continue;
+            }
+
             if (!is_file($absolutePath)) {
                 $this->error(
                     "Versioning file [{$absolutePath}] failed."
