@@ -7,12 +7,13 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Config\Repository;
 use TheCoderRaman\AssetsVersion\AssetsFinder;
 use TheCoderRaman\AssetsVersion\AssetsVersion;
+use Illuminate\Contracts\Support\DeferrableProvider;
 use TheCoderRaman\AssetsVersion\Contracts\AssetsFinderInterface;
 use TheCoderRaman\AssetsVersion\Contracts\AssetsVersionInterface;
 use TheCoderRaman\AssetsVersion\Console\AssetsVersionCacheCommand;
 use TheCoderRaman\AssetsVersion\Console\AssetsVersionClearCommand;
 
-class AssetsVersionServiceProvider extends ServiceProvider
+class AssetsVersionServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Assets version config file path.
@@ -117,7 +118,7 @@ class AssetsVersionServiceProvider extends ServiceProvider
     /**
      * Get the services provided by the provider.
      *
-     * @return array
+     * @return array<int, string>
      */
     public function provides(): array
     {
