@@ -36,6 +36,24 @@
             "TheCoderRaman\\AssetsVersion\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "phpunit": [
+            "@php vendor/bin/phpunit"
+        ],
+        "testbench": "@php vendor/bin/testbench",
+        "testbench:serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "testbench:build": "@php vendor/bin/testbench workbench:build --ansi",
+        "testbench:prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "testbench:clear": "@php vendor/bin/testbench package:purge-skeleton --ansi"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
