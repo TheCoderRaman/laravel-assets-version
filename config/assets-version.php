@@ -48,7 +48,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | ASSET DIRECTORY
+    | ASSETS DIRECTORY
     |--------------------------------------------------------------------------
     |
     | The value specified here will serve as the root directory for all of
@@ -60,7 +60,7 @@ return [
     |
     */
 
-    'assets_path' => env('ASSET_PATH', "assets"),
+    'assets_path' => env('ASSETS_PATH', "assets"),
 
     /*
     |--------------------------------------------------------------------------
