@@ -48,6 +48,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | ASSETS URL
+    |--------------------------------------------------------------------------
+    |
+    | The value you specify here acts as the root path for your web 
+    | application's assets directory url. This means all assets
+    | within this directory will be automatically mapped to
+    | their corresponding file paths during URL generation.
+    |
+    | @type string
+    |
+    */
+
+    'assets_url' => env('ASSETS_URL', "assets"),
+
+    /*
+    |--------------------------------------------------------------------------
     | ASSETS DIRECTORY
     |--------------------------------------------------------------------------
     |
