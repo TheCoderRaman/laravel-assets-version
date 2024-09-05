@@ -72,6 +72,18 @@ class AssetsVersion implements AssetsVersionInterface
     }
 
     /**
+     * Get the asset url.
+     *
+     * @return string
+     */
+    public function getAssetUrl()
+    {
+        return trim($this
+            ->getNamedConfig("assets_url", '/'), "/"
+        );
+    }
+
+    /**
      * Get the asset css path.
      *
      * @param string $path
@@ -112,24 +124,25 @@ class AssetsVersion implements AssetsVersionInterface
         string $path, bool $fullUrl = false
     ): string {
         $path = ltrim($path, "/");
+        $assetUrl = $this->getAssetUrl();
 
         if (empty($path)) {
-            return asset('/');
+            return asset($assetUrl);
         }
 
         if (!isset(
             $this->versioned[$path]
         )) {
-            return asset($path);
+            return asset("{$assetUrl}/{$path}");
         }
 
         $pathVersion = $this->versioned[$path];
 
         if(!$fullUrl){
-            return asset("{$path}?v={$pathVersion}");
+            return asset("{$assetUrl}/{$path}?v={$pathVersion}");
         }
 
-        return url(asset("{$path}?v={$pathVersion}"));
+        return url(asset("{$assetUrl}/{$path}?v={$pathVersion}"));
     }
 
     /**
